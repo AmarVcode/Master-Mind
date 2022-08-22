@@ -1,0 +1,119 @@
+body{
+
+background: darkblue;
+
+}
+
+#effect{
+display: flex;
+background-color: transparent;
+gap: 40px;
+position: fixed;
+z-index: -10;
+}
+
+#effect>div{
+    position: fixed;
+    bottom: 200px;
+width: 30px;
+height: 50px;
+background-color: cyan;
+border-radius: 20px;
+position: relative;
+z-index: -10;
+}
+
+
+
+#effect>div:nth-child(1){
+    animation: mymove 1000ms infinite;
+}
+#effect>div:nth-child(2){
+    animation: mymove 800ms infinite;
+}
+#effect>div:nth-child(3){
+    animation: mymove 1200ms infinite;
+}
+#effect>div:nth-child(4){
+    animation: mymove 500ms infinite;
+}
+#effect>div:nth-child(5){
+    animation: mymove 2s infinite;
+}
+
+#effect>div:nth-child(6){
+    animation: mymove 1800ms infinite;
+}
+#effect>div:nth-child(7){
+    animation: mymove 2200ms infinite;
+}
+#effect>div:nth-child(8){
+    animation: mymove 600ms infinite;
+}
+#effect>div:nth-child(9){
+    animation: mymove 7s infinite;
+}
+#effect>div:nth-child(10){
+    animation: mymove 17s infinite;
+}
+
+
+
+#effect>div:nth-child(11){
+    animation: mymove 30s infinite;
+}
+#effect>div:nth-child(12){
+    animation: mymove 17s infinite;
+}
+#effect>div:nth-child(13){
+    animation: mymove 28s infinite;
+}
+#effect>div:nth-child(14){
+    animation: mymove 12s infinite;
+}
+#effect>div:nth-child(15){
+    animation: mymove 8s infinite;
+}
+
+#effect>div:nth-child(16){
+    animation: mymove 31s infinite;
+}
+#effect>div:nth-child(17){
+    animation: mymove 2s infinite;
+}
+#effect>div:nth-child(18){
+    animation: mymove 3s infinite;
+}
+#effect>div:nth-child(19){
+    animation: mymove 800ms infinite;
+}
+#effect>div:nth-child(20){
+    animation: mymove 1s infinite;
+}
+@keyframes mymove {
+    from {top: 0px; filter: blur(0px);}
+    to {top: 700px;  background-color: darkblue; height: 800px; transform: scale(1.5); filter: blur(8px);}
+  }
+
+
+
+
+  #container{
+
+    width: 500px;
+    padding: 100px;
+    margin: auto;
+    background-color: black;
+    border-radius: 50px;
+    margin-top: 100px;
+    border: 10px solid darkcyan;
+    cursor: pointer;
+    transition: 2s;
+  }
+
+  #container:hover{
+    border-top: 10px solid red;
+    border-bottom: 10px solid orange;
+    border-left: 10px solid pink;
+    border-right: 10px solid yellow;
+  }
