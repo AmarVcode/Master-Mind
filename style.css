@@ -144,15 +144,36 @@ body {
 
 
 #eye {
-
+    border-bottom: 25px solid teal;
     display: grid;
-    grid-template-columns: 150px 150px;
-    width: fit-content;
-    margin: auto;
-    gap: 40px;
+    grid-template-columns: auto auto;
+    width: 90%;
+    gap: 10%;
+    border-radius: 50%;
+    padding: 10%;
+    animation: mymouth 10s infinite;
+    position: relative;
+   margin: auto;
+   height: 250px;
+   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
+@keyframes mymouth{
+  0%{
+    border-bottom: 1px double rgb(0, 0, 0);
+  }
+  50% {
+    border-bottom: 50px double rgb(0, 0, 0);
+  }
+  100%{
+    border-bottom: 1px double rgb(0, 0, 0);
+  }
+}
+
+
+
 #eye>div {
+    padding: 20px;
     border-radius: 50%;
     height: 100px;
     display: grid;
@@ -165,7 +186,7 @@ body {
 #eye>div>div {
     width: 100px;
     height: 100px;
-    background: linear-gradient(180deg, white, black, white);
+    background: linear-gradient(180deg, rgb(0, 0, 0), rgb(255, 255, 255), rgb(0, 0, 0));
     border-radius: 50%;
     animation: myeye 2000ms infinite ease-in-out;
     filter: blur(2px);

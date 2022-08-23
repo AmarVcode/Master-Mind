@@ -23,7 +23,7 @@ let name=document.getElementById("name").value;
 
 let alert1=document.createElement("div");
 alert1.setAttribute("class", "alert alert-warning alert-dismissible fade show")
-alert1.textContent="Hi, "+name +" .Let Start ,Pick Any Number Between 1 to Infinite ('Dont Forget Your Number'). Dont Tell Anyone Just In Your Mind ! Hence X = Your Number ,Right. First step is double the value of X";
+alert1.textContent="Hi, "+name +" .Let Start ,Pick Any Number Between 1 to Infinite ('Dont Forget Your Number'). Dont Tell Anyone Just In Your Mind ! Hence X = Your Number Right.-------------> First step is double the value of X";
 
 
 let donebtn=document.createElement("button");
