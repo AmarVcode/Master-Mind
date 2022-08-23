@@ -12,7 +12,7 @@ mynumber=mynumber*2;
 
 
 function LetStart(){
-
+window.alert("Read Properly Everything")
 let name=document.getElementById("name").value;
    if(name!==""){
     document.getElementById("formcontainer").innerHTML=null;
@@ -22,8 +22,8 @@ let name=document.getElementById("name").value;
     let alertinfo=document.getElementById("alertinfo");
 
 let alert1=document.createElement("div");
-alert1.setAttribute("class", "alert alert-warning alert-dismissible fade show")
-alert1.textContent="Hi, "+name +" .Let Start ,Pick Any Number Between 1 to Infinite ('Dont Forget Your Number'). Dont Tell Anyone Just In Your Mind ! Hence X = Your Number Right.-------------> First step is double the value of X";
+alert1.setAttribute("class", "alert alert-danger alert-dismissible fade show")
+alert1.textContent="Hi, "+name +" .Let Start ,Pick Any Number Between 1 to 100 ('Dont Forget Your Number'). Dont Tell Anyone Just In Your Mind ! Hence X = Your Number Right.";
 
 
 let donebtn=document.createElement("button");
@@ -34,8 +34,8 @@ document.getElementById("alertinfo").innerHTML=null;
 
          
 let alert3=document.createElement("div");
-alert3.setAttribute("class", "alert alert-warning alert-dismissible fade show");
-alert3.textContent="You are Smart Then by, My Thinking, But not Smart Then By me . Let, I will give you a number add that Number in your number ,my number was "+ mynumber+ ". Hence X=X+"+mynumber+"? "+"You can use Calculator if you need!";
+alert3.setAttribute("class", "alert alert-success alert-dismissible fade show");
+alert3.textContent="You are Smart Then by, My Thinking, But not Smart Then By me . Let, Double the value of your number";
 let negdbtn=document.createElement("button");
 negdbtn.innerText="Hmmm, Done";
 negdbtn.setAttribute("class", "gobtn");
@@ -44,10 +44,10 @@ negdbtn.onclick=function(){
              
 let alert4=document.createElement("div");
 alert4.setAttribute("class", "alert alert-warning alert-dismissible fade show");
-alert4.textContent="We Almost Done, Just half the Value of X or X=X/2.  And Then Minus Your number from X ('Your Number is what number you Pick in Start of game between 1 to infinite')";
+alert4.textContent="We Almost Done, Let My Turn Add "+mynumber+" to Your Number. And Then Half the total.------------ After That Remove or minus your number ('Your Number was What you pick in start of game')";
 
 let negldbtn=document.createElement("button");
-negldbtn.innerText="I know The value of X";
+negldbtn.innerText="I know what Number left in your mind";
 negldbtn.setAttribute("class", "gobtn");
 negldbtn.onclick=function(){
     document.getElementById("alertinfo").innerHTML=null;
@@ -64,16 +64,7 @@ alertinfo.append(alert4,negldbtn)
 alertinfo.append(alert3,negdbtn)
 
 
-let positivebtn=document.createElement("button");
-positivebtn.innerText="Positive";
-positivebtn.setAttribute("class", "gobtn");
-
-alert2.append(negativebtn,positivebtn);
-alertinfo.append(alert2)
-
 }
-
-
 
 
 alert1.append(donebtn);

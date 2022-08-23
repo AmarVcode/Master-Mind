@@ -1,7 +1,7 @@
 body {
 
     background: darkblue;
-
+    padding-bottom: 500px;
 }
 
 #effect {
@@ -130,6 +130,7 @@ body {
 
 
 #container {
+    min-width: 400px;
     max-width: 50%;
     padding: 100px;
     margin: auto;
@@ -163,7 +164,7 @@ body {
     border-bottom: 1px double rgb(0, 0, 0);
   }
   50% {
-    border-bottom: 50px double rgb(0, 0, 0);
+    border-bottom: 100px double rgb(0, 0, 0);
   }
   100%{
     border-bottom: 1px double rgb(0, 0, 0);
