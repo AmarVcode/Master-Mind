@@ -119,8 +119,7 @@ function callbot() {
             print("I am Done")
             botprint("Let Z = Y - X")
             botprint("Type Done and Enter")
-            z = false;
-            result = true;
+            result = false;
             document.getElementById("human").value = "";
         }
         else {
