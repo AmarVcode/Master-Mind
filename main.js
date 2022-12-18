@@ -27,7 +27,7 @@ function error(str) {
 }
 
 let number = Math.random();
-number = number * 20;
+number = (number * 20) + 10;
 number = Math.floor(number);
 number = number * 2;
 
@@ -40,8 +40,9 @@ let result = false;
 console.log(number)
 function callbot() {
     let quest = document.getElementById("human").value;
+    quest = quest.toLowerCase()
     if (start == true) {
-        if (quest == "Ready" || quest == "ready") {
+        if (quest == "ready") {
             print("I am Ready")
             botprint("Type Your Name ?")
             start = false;
@@ -72,38 +73,55 @@ function callbot() {
 
     }
     else if (done == true) {
-        if (quest == "done" || quest == "Done") {
+        if (quest == "done") {
             print("I am Done")
             botprint("Let X = Your Number. U think in your Mind Don't Forget This Number")
             botprint("Let Y = X + X")
             botprint("Type Done and Enter")
             y = true;
             done = false;
+            document.getElementById("human").value = "";
+
         }
         else {
             error("Type Done If U are Done")
         }
     }
     else if (y == true) {
-        if (quest == "done" || quest == "Done") {
+        if (quest == "done") {
             print("I am Done")
             botprint("Let Y=Y + " + number)
             botprint("Type Done and Enter")
             y = false;
             z = true;
+            document.getElementById("human").value = "";
+
         }
         else {
             error("Type Done If U are Done")
         }
     }
     else if (z == true) {
-        if (quest == "done" || quest == "Done") {
+        if (quest == "done") {
             print("I am Done")
-            botprint("Let Half The Value Of Y. Example :- 20=10, 100=50, etc...")
+            botprint("Let Y = Y / 2. Example :- 20=10, 100=50, etc...")
+            botprint("Type Done and Enter")
+            z = false;
+            result = true;
+            document.getElementById("human").value = "";
+        }
+        else {
+            error("Type Done If U are Done")
+        }
+    }
+    else if (result == true) {
+        if (quest == "done") {
+            print("I am Done")
             botprint("Let Z = Y - X")
             botprint("Type Done and Enter")
             z = false;
             result = true;
+            document.getElementById("human").value = "";
         }
         else {
             error("Type Done If U are Done")
@@ -113,7 +131,11 @@ function callbot() {
         let str = "hence, Z is Equal to " + number / 2 + " ,😎 I am Right 😎";
         botprint(str)
         document.getElementById("last").classList.add("bg");
+        document.getElementById("human").value = "";
+
     }
+
+    window.scrollBy(0, 500)
 }
 
 
@@ -132,23 +154,29 @@ function keynum(key) {
         i = i.join("")
         input.value = i;
     }
-    else{
+    else if (key == "Escape" || key == "Shift" || key == "CapsLock" || key == "Tab" || key == "ArrowUp" || key == "ArrowDown" || key == "ArrowLeft" || key == "ArrowRight" || key == "NumLock" || key == "Control") {
+
+    }
+    else {
         let input = document.getElementById("human");
         let i = input.value;
-        i=i+key;
+        i = i + key;
         input.value = i;
-        
+
     }
 }
 
 
 
+function typed() {
 
 
-addEventListener("keydown", e => {
-    console.log(e.key);
-    let key = e.key;
-    keynum(key)
+    addEventListener("keydown", e => {
+        console.log(e.key);
+        let key = e.key;
+        keynum(key)
+    }
+    )
 }
-)
 
+typed()
