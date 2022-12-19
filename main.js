@@ -145,7 +145,10 @@ function callbot() {
 
 
 function keynum(key) {
-    if (key == "Enter") {
+let char="qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
+
+
+if (key == "Enter") {
         callbot()
     }
     else if (key == "Backspace") {
@@ -156,16 +159,17 @@ function keynum(key) {
         i = i.join("")
         input.value = i;
     }
-    else if (key == "Escape" || key == "Shift" || key == "CapsLock" || key == "Tab" || key == "ArrowUp" || key == "ArrowDown" || key == "ArrowLeft" || key == "ArrowRight" || key == "NumLock" || key == "Control") {
-
-    }
-    else {
-        let input = document.getElementById("human");
+    else{
+        for(j=0;j<=char.length;j++){
+            if(key==char[j]){
+let input = document.getElementById("human");
         let i = input.value;
-        i = i + key;
-        input.value = i;
-
+        i=i+char[j];
+        input.value=i
+            }
+        
     }
+}
 }
 
 
