@@ -30,7 +30,7 @@ let number = Math.random();
 number = (number * 20) + 10;
 number = Math.floor(number);
 number = number * 2;
-
+let username=""
 let start = true;
 let uname = false;
 let done = false;
@@ -43,23 +43,26 @@ function callbot() {
     quest = quest.toLowerCase()
     if (start == true) {
         if (quest == "ready") {
-            print("I am Ready")
-            botprint("Type Your Name ?")
+            print("I am Ready, Lets Go......")
+            botprint("Whats Your Name ?")
+            botprint("Type Your Name.")
             start = false;
             uname = true;
             document.getElementById("human").value = "";
         }
         else {
             error("U Are Not Ready")
+            error("Type ready")
         }
     }
     else if (uname == true) {
         if (quest == "") {
-            error("Type Valid Name")
+            error("Type Valid Name!")
         }
         else {
+            username=quest;
             let str = "My Name is " + quest;
-            let str2 = "Hi, " + quest;
+            let str2 = "Hi, " + quest +" , Read Question Properly";
             print(str)
             botprint(str2)
             botprint("Take Any Number in your Mind Between 1 to 100, Example 1,2,3..until 100.")
@@ -104,7 +107,7 @@ function callbot() {
     else if (z == true) {
         if (quest == "done") {
             print("I am Done")
-            botprint("Let Y = Y / 2. Example :- 20=10, 100=50, etc...")
+            botprint("Let Y = Y / 2. Example :- 20 = 10, 100 = 50, etc...")
             botprint("Type Done and Enter")
             z = false;
             result = true;
@@ -118,7 +121,7 @@ function callbot() {
         if (quest == "done") {
             print("I am Done")
             botprint("Let Z = Y - X")
-            botprint("Type Done and Enter")
+            botprint("Type Done and Enter, and Ready For SurPrize "+username)
             result = false;
             document.getElementById("human").value = "";
         }
@@ -127,7 +130,7 @@ function callbot() {
         }
     }
     else {
-        let str = "hence, Z is Equal to " + number / 2 + " ,😎 I am Right 😎";
+        let str = "hence, Z is Equal to " + number / 2 + " ,😎 I am Right 😎 "+username;
         botprint(str)
         document.getElementById("last").classList.add("bg");
         document.getElementById("human").value = "";
